@@ -1,0 +1,15 @@
+{
+  "name": "kc-transit",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "migrate": "node-pg-migrate -m db/migrations --envPath .env",
+    "migrate:create": "node-pg-migrate create -m db/migrations --migration-file-language sql"
+  },
+  "devDependencies": {
+    "dotenv": "^18.0.5",
+    "node-pg-migrate": "^9.0.0"
+  }
+}
